@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/11/28 22:29:24
+// Create Date: 2023/12/05 21:49:16
 // Design Name: 
-// Module Name: key_board_tbc
+// Module Name: Learn_Mode
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,16 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module key_board_tbc(
-
+module Learn_Mode(
+    input [7:0] key_board_in
     );
-    reg[7:0] in;
-    wire[3:0] out;
-    key_board div(in,{24'b000_001_010_011_100_101_110_111},out);
-    initial begin
-        in=8'b0000_0000;
-        $monitor("%d %d",in,out);
-        repeat(255) #10 in=in+1;
-        #10 $finish;
-    end
 endmodule

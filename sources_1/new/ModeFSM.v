@@ -3,10 +3,13 @@
 module ModeFSM(
     input wire clk,         // Clock signal connected to P17
     input wire rst,         // Reset signal
+    input wire[0:7] key_board_in,//Key board of playing signal
     input wire in,          // Mode signal
     output wire [1:0] mode, // State signal
     output wire signal      // Buzzer signal
 );
+    reg[2:0] play_mode[0:8];
+    
 
 //  About Time:
 //      P17 : 1 ^ -10 s
@@ -36,7 +39,10 @@ module ModeFSM(
     // Return to MENU state when rst on POSITIVE edge
     always @(posedge clk or posedge rst) begin
         if (rst)
+        begin
             state <= MENU;
+            {play_mode[0],play_mode[1],play_mode[2],play_mode[3],play_mode[4],play_mode[5],play_mode[6],play_mode[7]}=24'b000_001_010_011_100_101_110_111;
+        end    
         else
             state <= next_state;
     end
@@ -45,12 +51,13 @@ module ModeFSM(
     // all to auto for now
     always @* begin
         case (state)
-            MENU: next_state = in ? AUTO : MENU;
-            FREE: next_state = in ? AUTO : MENU;
-            AUTO: next_state = in ? AUTO : MENU;
-            LERN: next_state = in ? AUTO : MENU;
+            MENU: next_state = in ?  FREE :  FREE;
+            FREE: next_state = in ?  FREE :  FREE;
+            AUTO: next_state = in ?  FREE :  FREE;
+            LERN: next_state = in ?  FREE :  FREE;
         endcase
     end
+    FREE_MODE FREE_MODE(clk, key_board_in,{play_mode[0],play_mode[1],play_mode[2],play_mode[3],play_mode[4],play_mode[5],play_mode[6],play_mode[7]},signal);
 
     // AUTO_Mode instantiation
     AUTO_Mode AUTO_Mode(
