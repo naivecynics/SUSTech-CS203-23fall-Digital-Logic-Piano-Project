@@ -7,6 +7,8 @@ module AUTO_Mode(
     output wire signal
 );
 
+
+    // Buzzer instantiation
     wire [3:0] notes;
     reg [3:0] note;
 
@@ -16,11 +18,21 @@ module AUTO_Mode(
         .speaker(signal)
     );
 
+    // BPM_Counter instantiation
+    wire clk_bpm;
+
+    BPM_Counter BPM_counter(
+        .bpm(8'd120),
+        .clk(clk),
+        .rst(rst),
+        .clk_bpm(clk_bpm)
+    );
+
+	
     // scale playing
-    always @(posedge clk, posedge rst) begin
-        if (rst) begin
+    always @(posedge clk_bpm, negedge rst) begin
+        if (!rst) 
             note <= 0;
-        end
         else begin
             if (enable) begin
                 note <= note + 1;

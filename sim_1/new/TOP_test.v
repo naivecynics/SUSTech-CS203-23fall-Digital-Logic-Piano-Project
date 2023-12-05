@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Buzzer_test();
+module TOP_test();
     reg clk, rst, in;
     wire [1:0] mode, signal;
 

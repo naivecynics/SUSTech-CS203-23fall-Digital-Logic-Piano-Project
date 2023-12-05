@@ -1,19 +1,25 @@
 `timescale 1ns / 1ps
 
 module ModeFSM(
-    input wire clk,         // Clock signal
+    input wire clk,         // Clock signal connected to P17
     input wire rst,         // Reset signal
     input wire in,          // Mode signal
     output wire [1:0] mode, // State signal
     output wire signal      // Buzzer signal
 );
 
+//  About Time:
+//      P17 : 1 ^ -10 s
+//      1 ns : 1 ^ -9 s
+//      #500 change: 1 ms (sim) = 1 s (reality)
+
+
     // 4 States
     parameter MENU = 2'b00, FREE = 2'b01, 
                 AUTO = 2'b10, LERN = 2'b11;
 
     // activation signal for MODEs
-    reg AUTO_enable = 1'b1;
+    reg AUTO_enable = 1'b0;
     reg FREE_enable = 1'b0;
     reg LERN_enable = 1'b0;
     wire AUTO_wire;
@@ -23,7 +29,6 @@ module ModeFSM(
     assign FREE_wire = FREE_enable;
     assign LERN_wire = LERN_enable;
 
-    
     // State register
     reg [1:0] state, next_state;
     assign mode = state;
@@ -54,6 +59,14 @@ module ModeFSM(
         .enable(AUTO_wire),
         .signal(signal)
     );
+
+    // FREE_Mode instantiation
+    // FREE_Mode FREE_Mode(
+    //     .clk(clk),
+    //     .rst(rst),
+    //     .enable(FREE_wire),
+    //     .signal(signal)
+    // );
     
     // Module activation
     always @* begin
