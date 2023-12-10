@@ -82,10 +82,14 @@ module ModeFSM(
                 // todo
             end
             FREE: begin
-                // todo
+                FREE_enable = 1'b1;
+                AUTO_enable = 1'b0;
+                LERN_enable = 1'b0;
             end
             AUTO: begin
                 AUTO_enable = 1'b1;
+                FREE_enable = 1'b0;
+                LERN_enable = 1'b0;
             end
             LERN: begin
                 // todo
