@@ -19,6 +19,7 @@ module AUTO_Mode_test();
     end
     
     always begin
+        //#0.05 clk = ~clk;
         #500 clk = ~clk;
     end
 endmodule
