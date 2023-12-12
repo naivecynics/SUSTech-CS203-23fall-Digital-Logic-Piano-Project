@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+`include "CONSTANT.v"
+
 module BPM_Counter(bpm, clk, rst, clk_bpm);
 
 	input [7:0] bpm;
@@ -21,8 +23,8 @@ module BPM_Counter(bpm, clk, rst, clk_bpm);
 		clk_bpm <= 0;
     end else begin
         cnt <= cnt + 1;
-        //if (cnt * bpm >= 40'd6_00000_00_0000) begin
-        if (cnt * bpm >= 40'd6_00000_00) begin
+        if (cnt * bpm >= `CLK_PERIOD_REAL) begin
+        //if (cnt * bpm >= `CLK_PERIOD_TBC) begin
             clk_bpm <= 1;
             cnt <= 0;
         end else begin

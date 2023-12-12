@@ -39,12 +39,15 @@ module ModeFSM(
 
 
     // activation signal for MODEs
+    reg MENU_enable = 1'b0;
     reg AUTO_enable = 1'b0;
     reg FREE_enable = 1'b0;
     reg LERN_enable = 1'b0;
+    wire MENU_wire;
     wire AUTO_wire;
     wire FREE_wire;
     wire LERN_wire;
+    assign MENU_wire = MENU_enable;
     assign AUTO_wire = AUTO_enable;
     assign FREE_wire = FREE_enable;
     assign LERN_wire = LERN_enable;
@@ -102,6 +105,7 @@ module ModeFSM(
    end
     
     
+    // FREE_Mode instantiation
     FREE_MODE FREE_MODE(
         clk, key_board_in,{play_mode[0],play_mode[1],play_mode[2],play_mode[3],play_mode[4],play_mode[5],play_mode[6],play_mode[7]},signal
     );
@@ -114,35 +118,36 @@ module ModeFSM(
         .signal(signal)
     );
 
-    // FREE_Mode instantiation
-    // FREE_Mode FREE_Mode(
-    //     .clk(clk),
-    //     .rst(rst),
-    //     .enable(FREE_wire),
-    //     .signal(signal)
-    // );
+
     
     // Module activation
     always @* begin
         case (state)
             MENU: begin
-                // todo
+                MENU_enable = 1'b1;
+                FREE_enable = 1'b0;
+                AUTO_enable = 1'b0;
+                LERN_enable = 1'b0;
             end
             FREE: begin
+                MENU_enable = 1'b0;
                 FREE_enable = 1'b1;
                 AUTO_enable = 1'b0;
                 LERN_enable = 1'b0;
             end
             AUTO: begin
-                AUTO_enable = 1'b1;
+                MENU_enable = 1'b0;
                 FREE_enable = 1'b0;
+                AUTO_enable = 1'b1;
                 LERN_enable = 1'b0;
             end
             LERN: begin
-                // todo
+                MENU_enable = 1'b0;
+                FREE_enable = 1'b0;
+                AUTO_enable = 1'b0;
+                LERN_enable = 1'b1;
             end
         endcase
     end
-
 
 endmodule

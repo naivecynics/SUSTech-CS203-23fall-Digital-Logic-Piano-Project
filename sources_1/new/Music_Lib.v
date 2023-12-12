@@ -4,7 +4,6 @@ module Music_Lib(
     input id,
     input rst,
     input clk_bpm,
-    input enable,
     output [3:0] note,
     output [7:0] bpm
     );
@@ -18,7 +17,7 @@ module Music_Lib(
     //-------------------------------------------------
     // length of music
     initial begin
-        music_lengths[0] = 8'd16;
+        music_lengths[0] = 8'd50;
         music_lengths[1] = 8'd8;
         music_lengths[2] = 8'd8;
         music_lengths[3] = 8'd8;
@@ -49,6 +48,38 @@ module Music_Lib(
         music_lib[14][0] = 2;
         music_lib[15][0] = 1;
         music_lib[16][0] = 0;
+        music_lib[17][0] = 5;
+        music_lib[18][0] = 5;
+        music_lib[19][0] = 4;
+        music_lib[20][0] = 4;
+        music_lib[21][0] = 3;
+        music_lib[22][0] = 3;
+        music_lib[23][0] = 2;
+        music_lib[24][0] = 0;
+        music_lib[25][0] = 5;
+        music_lib[26][0] = 5;
+        music_lib[27][0] = 4;
+        music_lib[28][0] = 4;
+        music_lib[29][0] = 3;
+        music_lib[30][0] = 3;
+        music_lib[31][0] = 2;
+        music_lib[32][0] = 0;
+        music_lib[33][0] = 1;
+        music_lib[34][0] = 1;
+        music_lib[35][0] = 5;
+        music_lib[36][0] = 5;
+        music_lib[37][0] = 6;
+        music_lib[38][0] = 6;
+        music_lib[39][0] = 5;
+        music_lib[40][0] = 0;
+        music_lib[41][0] = 4;
+        music_lib[42][0] = 4;
+        music_lib[43][0] = 3;
+        music_lib[44][0] = 3;
+        music_lib[45][0] = 2;
+        music_lib[46][0] = 2;
+        music_lib[47][0] = 1;
+        music_lib[48][0] = 0;
     end
     //-------------------------------------------------
 
@@ -68,14 +99,12 @@ module Music_Lib(
         if (!rst) 
             Note <= 0;
         else begin
-            if (enable) begin
-                if (cnt > length) begin
-                    cnt <= 0;
-                    Note <= 0;
-                end else begin
-                    cnt <= cnt + 1;
-                    Note <= music_lib[cnt][id];
-                end
+            if (cnt > length) begin
+                cnt <= 0;
+                Note <= 0;
+            end else begin
+                cnt <= cnt + 1;
+                Note <= music_lib[cnt][id];
             end
         end
     end

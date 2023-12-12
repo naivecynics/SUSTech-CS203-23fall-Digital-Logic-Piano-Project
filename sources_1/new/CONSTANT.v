@@ -1,0 +1,7 @@
+// - PIANO-PROJECT - 
+// CONSTANT LIBRARY
+
+// BPM_Counter.v
+`define CLK_PERIOD_REAL 60'd6_00000_00_0000
+`define CLK_PERIOD_TBC 40'd6_00000_00 // #500 clk = ~clk;
+
