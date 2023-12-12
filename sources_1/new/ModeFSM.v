@@ -5,19 +5,10 @@ module ModeFSM(
     input wire rst,         // Reset signal
     input wire[7:0] key_board_in,//Key board of playing signal
     input wire in,          // Mode signal
-<<<<<<< HEAD
     input wire setting,     //Setting sinal
-=======
-    input wire mode_switch_btn,  // �����л�ģʽ�İ�ť
-    input wire confirm_btn,      // ����ȷ�Ͻ���ģʽ�İ�ť
->>>>>>> 20334eba996ee4003258a1b6b6e14a40d7c76619
     output wire [1:0] mode, // State signal
     output wire signal     // Buzzer signal
 );
-<<<<<<< HEAD
-=======
-    reg[2:0] play_mode[0:8];//���ڴ��水ť״̬
->>>>>>> 20334eba996ee4003258a1b6b6e14a40d7c76619
     
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
