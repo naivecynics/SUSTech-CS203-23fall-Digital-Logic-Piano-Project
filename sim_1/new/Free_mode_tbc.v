@@ -26,11 +26,17 @@ module Free_mode_tbc(
     reg clk=1'b0; 
      reg[7:0] in;
     wire out;
-   FREE_MODE div(clk,in,{24'b000_001_010_011_100_101_110_111},out);
+    reg tmp;
+   FREE_MODE div(clk,in,{24'b000_001_010_011_100_101_110_111},tmp,out);
     initial begin
         in=8'b0000_0000;
+        tmp=1'b0;
         $monitor("%d %d",in,out);
-        repeat(255) #10 in=in+1;
+        repeat(1000) #10 in=in+1;
+        tmp=1'b1;
+        repeat(1000) #10 in=in+1;
+        tmp=1'b0;
+        repeat(1000) #10 in=in+1;
         #10 $finish;
     end 
     initial begin

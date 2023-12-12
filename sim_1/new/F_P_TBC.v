@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/12/05 22:44:54
+// Create Date: 2023/12/12 21:59:08
 // Design Name: 
-// Module Name: Free_mode_part_test_bit___
+// Module Name: F_P_TBC
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,14 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Free_mode_part_test_bit___(
-        input clk,
-        input[7:0] operation,
-        output speaker
+module F_P_TBC(
+
     );
-    wire [3:0] tmp;
-    key_board2 key_board2(operation,{24'b000_001_010_011_100_101_110_111},tmp);
-    Buzzer buzzer3(clk,tmp1,speaker);
+            reg clk;
+    reg[7:0] operation;
+    wire speaker;
+    Free_mode_part_test_bit___ div(clk,operation,speaker);
+    initial begin
+    clk=1'b0;
+    forever #5 clk=~clk;
+    end
+    initial begin
+    operation=8'b0000_0000;
+    repeat(2000) #20 operation = operation+1;
+    #20 $finish;
+    end
 endmodule
-
-

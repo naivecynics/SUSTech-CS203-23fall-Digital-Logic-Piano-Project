@@ -2,7 +2,7 @@
 
 module key_board(
     input [7:0] in,
-    input  [23:0] assign_modul,
+    input  [23:0] assign_modul,//make input meaning varies with setting
     output reg [3:0] out
     );
     always@(in)

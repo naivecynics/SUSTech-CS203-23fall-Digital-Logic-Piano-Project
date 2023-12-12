@@ -24,8 +24,17 @@ module Buzzer_tbc(
 
     );
      reg clk=1'b0;
-     reg[3:0] in;
+     reg[3:0] in,tmp;
      wire out;
+     reg clk2=1'b1;
+     always@(negedge clk )
+     begin
+      clk2<=~clk2;
+     end
+     always@(posedge clk2)
+     begin
+     tmp=in+1;
+     end
      Buzzer buz(clk,in,out);
            initial begin
        forever
@@ -33,8 +42,13 @@ module Buzzer_tbc(
        end
        initial begin
        in=4'b0000;
-       $monitor("%d %d %d",clk,in,out);
-       repeat(15)#10 in=in+1;
+       $monitor("%d %d %d %d",clk,in,out,clk2);
+       repeat(15)begin
+       #10 
+       in=tmp;
+       #10
+       in=4'b0000;
+       end
        #10$finish;
        end
 endmodule
