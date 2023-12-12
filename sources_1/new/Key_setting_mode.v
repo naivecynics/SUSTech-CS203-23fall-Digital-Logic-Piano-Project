@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/12/05 22:44:54
+// Create Date: 2023/12/09 16:25:21
 // Design Name: 
-// Module Name: Free_mode_part_test_bit___
+// Module Name: Key_setting_mode
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,14 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Free_mode_part_test_bit___(
-        input clk,
-        input[7:0] operation,
-        output speaker
+module Key_setting_mode(
+
     );
-    wire [3:0] tmp;
-    key_board2 key_board2(operation,{24'b000_001_010_011_100_101_110_111},tmp);
-    Buzzer buzzer3(clk,tmp1,speaker);
 endmodule
-
-
