@@ -1,0 +1,30 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/ip/mem_music/sim/mem_music.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_music
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/ip/mem_lib/sim/mem_lib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_lib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/BPM_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BPM_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/Button_Debouncer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Button_Debouncer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/Buzzer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Buzzer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/State_FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module State_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/led_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/music_lib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_lib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/note_MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/note_swift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_swift
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/seg_light_7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_light_7
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sources_1/new/tub_7_library.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tub_7_library
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Langchu HUANG/OneDrive - SUSTech/Desktop/piano/piano.srcs/sim_1/new/tbc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbc

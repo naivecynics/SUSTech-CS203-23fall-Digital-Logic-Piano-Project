@@ -1,0 +1,178 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Jan  4 19:33:31 2024
+| Host         : LAPTOP-05MN756V running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TOP_control_sets_placed.rpt
+| Design       : TOP
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   109 |
+| Unused register locations in slices containing registers |   657 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              39 |           20 |
+| No           | No                    | Yes                    |             184 |          108 |
+| No           | Yes                   | No                     |              46 |           37 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             210 |           62 |
+| Yes          | Yes                   | No                     |              32 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------------+--------------------------+----------------------------------------------+------------------+----------------+
+|                  Clock Signal                 |       Enable Signal      |               Set/Reset Signal               | Slice Load Count | Bel Load Count |
++-----------------------------------------------+--------------------------+----------------------------------------------+------------------+----------------+
+|  ml/ns/note_address_begin_reg[4]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[4]_C                |                1 |              1 |
+|  ml/ns/note_address_begin_reg[11]_LDC_i_1_n_1 |                          | c/note_address_begin_reg[11]_C               |                1 |              1 |
+|  ml/ns/note_address_begin_reg[5]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[5]_C                |                1 |              1 |
+|  ml/ns/note_address_begin_reg[0]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[0]_C                |                1 |              1 |
+|  ml/ns/note_address_begin_reg[10]_LDC_i_1_n_1 |                          | c/note_address_begin_reg[10]_C               |                1 |              1 |
+|  ml/ns/note_address_begin_reg[2]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[2]_C                |                1 |              1 |
+|  ml/ns/note_address_begin_reg[3]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[3]_C                |                1 |              1 |
+|  ml/ns/note_address_begin_reg[1]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[1]_C                |                1 |              1 |
+|  ml/ns/note_address_end_reg[0]_LDC_i_1_n_1    |                          | c/note_address_end_reg[0]_C                  |                1 |              1 |
+|  ml/ns/note_address_end_reg[4]_LDC_i_1_n_1    |                          | c/note_address_end_reg[4]_C                  |                1 |              1 |
+|  ml/ns/note_address_end_reg[10]_LDC_i_1_n_1   |                          | c/note_address_end_reg[10]_C                 |                1 |              1 |
+|  ml/ns/note_address_end_reg[1]_LDC_i_1_n_1    |                          | c/note_address_end_reg[1]_C                  |                1 |              1 |
+|  ml/ns/note_address_end_reg[5]_LDC_i_1_n_1    |                          | c/note_address_end_reg[5]_C                  |                1 |              1 |
+|  ml/ns/note_address_begin_reg[8]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[8]_C                |                1 |              1 |
+|  ml/ns/note_address_begin_reg[6]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[6]_C                |                1 |              1 |
+|  ml/ns/note_address_end_reg[2]_LDC_i_1_n_1    |                          | c/note_address_end_reg[2]_C                  |                1 |              1 |
+|  ml/ns/note_address_begin_reg[7]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[7]_C                |                1 |              1 |
+|  ml/ns/note_address_begin_reg[9]_LDC_i_1_n_1  |                          | c/note_address_begin_reg[9]_C                |                1 |              1 |
+|  ml/ns/note_address_end_reg[8]_LDC_i_1_n_1    |                          | c/note_address_end_reg[8]_C                  |                1 |              1 |
+|  ml/ns/note_address_end_reg[7]_LDC_i_1_n_1    |                          | c/note_address_end_reg[7]_C                  |                1 |              1 |
+|  ml/ns/note_address_end_reg[11]_LDC_i_1_n_1   |                          | c/note_address_end_reg[11]_C                 |                1 |              1 |
+|  ml/ns/note_address_end_reg[6]_LDC_i_1_n_1    |                          | c/note_address_end_reg[6]_C                  |                1 |              1 |
+|  ml/ns/note_address_end_reg[9]_LDC_i_1_n_1    |                          | c/note_address_end_reg[9]_C                  |                1 |              1 |
+|  ml/ns/note_address_end_reg[3]_LDC_i_1_n_1    |                          | c/note_address_end_reg[3]_C                  |                1 |              1 |
+|  ml/lib_index_reg[2]_LDC_i_1_n_1              |                          | ml/lib_index_reg[2]_LDC_i_2_n_1              |                1 |              1 |
+|  ml/lib_index_reg[1]_LDC_i_1_n_1              |                          | ml/lib_index_reg[1]_LDC_i_2_n_1              |                1 |              1 |
+|  sl/clkout                                    |                          | ml/bpm/cnt_1_reg[17]_0                       |                1 |              1 |
+|  sl/clkout                                    |                          | d/counter_reg[15]_0                          |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[9]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[3]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[6]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[8]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[9]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[1]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[2]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[4]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[3]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[7]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[11]_C                 |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[0]_C                  |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[10]_C                 |                1 |              1 |
+|  r/btn_out                                    |                          | ml/lib_index_reg[1]_LDC_i_2_n_1              |                1 |              1 |
+|  r/btn_out                                    |                          | ml/lib_index_reg[2]_LDC_i_2_n_1              |                1 |              1 |
+|  r/btn_out                                    |                          | s/lib_index_reg[3]_C_0                       |                1 |              1 |
+|  r/btn_out                                    |                          | s/lib_index_reg[0]_C                         |                1 |              1 |
+|  r/btn_out                                    | s/ena                    | ml/lib_index_reg[2]_LDC_i_1_n_1              |                1 |              1 |
+|  r/btn_out                                    | s/ena                    | ml/lib_index_reg[1]_LDC_i_1_n_1              |                1 |              1 |
+|  r/btn_out                                    | s/ena                    | s/lib_index_reg[3]_P_0                       |                1 |              1 |
+|  r/btn_out                                    | s/ena                    | s/lib_index_reg[4]_P                         |                1 |              1 |
+|  r/btn_out                                    | s/ena                    | s/lib_index_reg[0]_P                         |                1 |              1 |
+|  s/lib_index_reg[3]_P_0                       |                          | s/lib_index_reg[3]_C_0                       |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | c/note_address_end_reg[5]_C                  |                1 |              1 |
+|  s/lib_index_reg[4]_P                         |                          | s/lib_index_reg[3]_P                         |                1 |              1 |
+|  s/lib_index_reg[0]_P                         |                          | s/lib_index_reg[0]_C                         |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[5]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[0]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[4]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[10]_LDC_i_1_n_1   |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[1]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[2]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[8]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[7]_LDC_i_1_n_1    |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[11]_LDC_i_1_n_1   |                1 |              1 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_end_reg[6]_LDC_i_1_n_1    |                1 |              1 |
+|  sr/clkout_reg_n_1                            |                          | ml/bpm/cnt_1_reg[17]_0                       |                1 |              2 |
+|  clk_IBUF_BUFG                                |                          |                                              |                2 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[5]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[10]_C               |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[6]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[3]_C                |                2 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[8]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[2]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[9]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[9]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[7]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[7]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[10]_LDC_i_1_n_1 |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[5]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[6]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[0]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[0]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[11]_C               |                1 |              2 |
+|  ml/bpm/CLK                                   | ml/grade[1]_i_1_n_1      | ml/grade[1]_i_3_n_1                          |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[8]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[2]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[3]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[4]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | c/note_address_begin_reg[1]_C                |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[1]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[4]_LDC_i_1_n_1  |                1 |              2 |
+|  n_0_316_BUFG                                 |                          | ml/ns/note_address_begin_reg[11]_LDC_i_1_n_1 |                1 |              2 |
+|  C_BUFG                                       |                          |                                              |                3 |              3 |
+|  ttt/clk_wiz/inst/clk_out3                    |                          | ttt/u1/char_2[13][26]_i_1_n_1                |                3 |              4 |
+|  clk_IBUF_BUFG                                |                          | u/counter_reg[15]_0                          |                2 |              5 |
+|  ttt/clk_wiz/inst/clk_out3                    |                          | ttt/u1/char_2[13][28]_i_1_n_1                |                3 |              6 |
+|  s/E[0]                                       |                          |                                              |                2 |              7 |
+|  ttt/clk_wiz/inst/clk_out3                    |                          | ttt/u1/char_2[13][25]_i_1_n_1                |                2 |              7 |
+|  ttt/clk_wiz/inst/clk_out3                    | ttt/vga_ctrl_inst/cnt_v0 | ttt/vga_ctrl_inst/cnt_h_reg[8]_0             |                6 |             10 |
+|  ttt/clk_wiz/inst/clk_out3                    |                          | ttt/vga_ctrl_inst/cnt_h_reg[8]_0             |               10 |             12 |
+|  ttt/clk_wiz/inst/clk_out3                    |                          |                                              |               13 |             27 |
+|  clk_IBUF_BUFG                                | u/counter[0]_i_1__0_n_1  | u/counter_reg[15]_0                          |                8 |             31 |
+|  clk_IBUF_BUFG                                | r/counter[0]_i_1__3_n_1  | d/counter_reg[15]_0                          |                8 |             31 |
+|  clk_IBUF_BUFG                                | l/counter[0]_i_1__2_n_1  | u/counter_reg[15]_0                          |                8 |             31 |
+|  clk_IBUF_BUFG                                | d/counter[0]_i_1__1_n_1  | d/counter_reg[15]_0                          |                8 |             31 |
+|  clk_IBUF_BUFG                                | c/counter[0]_i_1__4_n_1  | u/counter_reg[15]_0                          |                8 |             31 |
+|  clk_IBUF_BUFG                                | s/counter0               | s/clear                                      |                8 |             32 |
+|  clk_IBUF_BUFG                                |                          | d/counter_reg[15]_0                          |               19 |             35 |
+|  clk_IBUF_BUFG                                | ml/bpm/cnt_2[0]_i_1_n_1  | ml/bpm/cnt_1_reg[17]_0                       |               10 |             38 |
+|  clk_IBUF_BUFG                                |                          | ml/bpm/cnt_1_reg[17]_0                       |               21 |             52 |
++-----------------------------------------------+--------------------------+----------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    64 |
+| 2      |                    27 |
+| 3      |                     1 |
+| 4      |                     1 |
+| 5      |                     1 |
+| 6      |                     1 |
+| 7      |                     2 |
+| 10     |                     1 |
+| 12     |                     1 |
+| 16+    |                    10 |
++--------+-----------------------+
+
+

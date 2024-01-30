@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="mem_lib_synth_1" LaunchDir="D:/digital logic/piano/piano.runs/mem_lib_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mem_music_synth_1" LaunchDir="D:/digital logic/piano/piano.runs/mem_music_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="clk_wiz_0_synth_1" LaunchDir="D:/digital logic/piano/piano.runs/clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/digital logic/piano/piano.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="mem_lib_synth_1"/>
+		<Parent Id="mem_music_synth_1"/>
+		<Parent Id="clk_wiz_0_synth_1"/>
+	</Run>
+</Runs>
+
