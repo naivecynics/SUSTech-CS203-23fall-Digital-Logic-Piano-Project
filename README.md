@@ -1,5 +1,7 @@
 # Digital-Logic-Piano-Project-Documentation
 
+###[Click here to the same published site in **Notion**](https://respected-llama-d66.notion.site/Digital-Logic-Piano-Project-Documentation-c2dd528424094027a32f844b5c453488?pvs=4)
+
 # 零、团队分工
 
 ---
